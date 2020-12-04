@@ -1,6 +1,5 @@
 import fileinput
-import functools
-import operator
+import math
 
 def hits(grid, dx, dy):
     w = len(grid[0])
@@ -21,4 +20,4 @@ print(hits(grid, 3, 1))
 # part 2
 dirs = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
 counts = [hits(grid, dx, dy) for dx, dy in dirs]
-print(functools.reduce(operator.mul, counts))
+print(math.prod(counts))
