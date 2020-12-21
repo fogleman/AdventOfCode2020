@@ -110,9 +110,9 @@ def run(tiles):
                 tile_masks, placed_masks, used_tiles, nx, ny)
             if not valid:
                 continue
-            tile_id, perm = valid[0]
+            tile_id, mask = valid[0]
             placed_tiles[(nx, ny)] = tile_id
-            placed_masks[(nx, ny)] = perm
+            placed_masks[(nx, ny)] = mask
             used_tiles.add(tile_id)
             queue.append((nx, ny))
 
